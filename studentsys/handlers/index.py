@@ -51,10 +51,3 @@ class RegisterHandler(BaseHandler):
 
 
 
-
-class ErrorHandler(BaseHandler):
-    """处理访问错误"""
-    def get(self):
-        self.render("error.html")
-
-
