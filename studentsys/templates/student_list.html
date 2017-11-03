@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生列表</title>
+</head>
+<!DOCTYPE html>
+<html>
+<body>
+<ul>
+    {% for student in students %}
+    <form method="post" action="/del_student">
+             {% raw xsrf_form_html() %}
+<p><li>ID：{{student[0]}}&nbsp;&nbsp;姓名：{{student[1]}}&nbsp;&nbsp;成绩：{{student[2]}}&nbsp;&nbsp;专业：{{student[3]}}&nbsp;&nbsp;班级：{{student[4]}}&nbsp;&nbsp;年龄：{{student[5]}} <input type="hidden" name="id" value="{{student[0]}}"/>&nbsp;&nbsp;<input type="submit" value="删除"></li></p>
+
+    </form>
+    {% end %}
+   <a href='/add_student'>添加学生信息</a>
+</ul>
+</body>
+</html>
+</html>

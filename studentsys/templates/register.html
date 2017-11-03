@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>注册</title>
+</head>
+<body>
+<form action='/register' method='post' >
+       {% raw xsrf_form_html() %}
+        <label>邮箱</label>
+        <input type='text' name='email' />
+
+
+        <label>密码</label>
+        <input type='password' name='password1' />
+
+
+        <label>确认密码</label>
+        <input type='password' name='password2' />
+
+    <p><input type="submit" value="立即注册" id="register" /></p></form>
+</form>
+<a href='/'>已有帐号，请直接登录</a>
+
+</body>
+</html>
